@@ -1013,8 +1013,7 @@ export function drawsegment (seg:string, pos: number) {
      * Block will update or efresh the screen if any data has been changed
      * @param screen is screen selection when using multiple screens
      */
-    //% subcategory=advanced
-    //% group="Control"
+    //% subcategory=paint
     //% blockId="VIEW128x64_draw" block="refresh display"
     //% block.loc.de="Display auffrischen"
     //% weight=63 blockGap=8
