@@ -1,7 +1,7 @@
 {
     "name": "pxt-oledpaint",
     "version": "1.1.0",
-    "description": "",
+    "description": "Use your SSD1306 OLED Display as 7-segment display or draw on it easily!",
     "dependencies": {
         "core": "*",
         "radio": "*"

@@ -1,7 +1,7 @@
 /**
  * Kitronik VIEW 128x64 Display blocks
  * LCD chip SSD1306
- * angepasst an Calliope mini und erweitert von M.Klein 6.5.21-11.5.21
+ * angepasst an Calliope mini und erweitert von M.Klein 6.5.21-12.5.21
  **/
 //% weight=100 color=#00A654 icon="\uf26c" block="128x64 Display"
 //% groups='["Control", "Show", "Draw", "Delete"]'
@@ -855,6 +855,36 @@ export function drawsegment (seg:string, pos: number) {
             for (let i = y; i < (y + len); i++) //loop to set the pixel in the vertical line
                 setPixel(x, i, screen)
         }   
+    }
+
+    /**
+     * Draw a rectangle using the X and Y coordinates as a starting point, then the width and height can be enter as the number of pixels
+     * @param width is width of the rectangle, eg: 60
+     * @param height is height of the rectangle, eg: 30
+     * @param x is the start position on the X axis, eg: 0
+     * @param y is the start position on the Y axis, eg: 0
+     * @param screen is screen selection when using multiple screens
+     */
+    //% blockId="VIEW128x64_draw_rect" block="draw a rectangle %width|wide %height|high from position x %x|y %y"
+    //% block.loc.de="zeichne ein Rechteck mit Breite %width|und Höhe %height| von Position x %x|y %y"
+    //% weight=71 blockGap=8
+    //% group="Draw"
+    //% inlineInputMode=inline
+    //% width.min=1 width.max=127
+    //% height.min=1 height.max=63
+    //% x.min=0 x.max=127
+    //% y.min=0 y.max=63
+    export function drawRect(width: number, height: number, x: number, y: number, screen?: 1) {        
+        if (!x)     //if variable x has not been used, default to x position of 0
+            x=0
+        
+        if (!y)     //if variable y has not been used, default to y position of 0
+            y=0
+        //draw the line of each side of the rectangle
+        drawLine(LineDirectionSelection.horiztonal, width, x, y, screen)
+        drawLine(LineDirectionSelection.horiztonal, width, x, y + height, screen)
+        drawLine(LineDirectionSelection.vertical, height, x, y, screen)
+        drawLine(LineDirectionSelection.vertical, height, x + width, y, screen)
     }
 
     /**
