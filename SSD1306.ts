@@ -876,6 +876,21 @@ export function drawsegment (seg:string, pos: number) {
         set_pos()               //set position to the start of the screen
         pins.i2cWriteBuffer(displayAddress, screenBuf)  //write clear buffer to the screen
     }
+ 
+   /**
+     * clears the screenbuffer. Refresh display to see changes!
+     */
+    //% blockId="VIEW128x64_clearbuffer" block="clear buffer"
+    //% block.loc.de="lösche Puffer"
+    //% group="Delete"
+    //% subcategory=advanced
+    //% weight=63 blockGap=8
+    export function clearbuffer() {
+        screenBuf.fill(0)       //fill the screenBuf with 0
+        screenBuf[0] = 0x40
+        set_pos()               //set position to the start of the screen
+    }
+
 
     /**
      * Turn display on and off. The information on the screen will be kept when display when turning on and off
