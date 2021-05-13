@@ -685,7 +685,7 @@ export function drawsegment (seg:string, pos: number) {
         pins.i2cWriteBuffer(displayAddress, writeOneByteBuf)    //send data to screen
     }
 
-
+// function should be updated, soon
     /**
      * show will allow any number, string or variable to be displayed onto the screen.
      * Block is expandable to set line and alignment
@@ -1093,7 +1093,7 @@ export function drawsegment (seg:string, pos: number) {
             invertRegisterValue = 0xA7
         }
         else{
-           invertRegisterValue = 0xA7 
+           invertRegisterValue = 0xA6
         }
         writeOneByte(invertRegisterValue)
     }
