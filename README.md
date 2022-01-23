@@ -18,14 +18,12 @@ Um dieses Repository in MakeCode zu bearbeiten.
 * klicke auf **Importieren** und dann auf **Importiere URL**
 * füge **https://github.com/mkleinsb/pxt-oledpaint** ein und klicke auf Importieren
 
-## Blockvorschau
+## Siebensegmentanzeige
 
-Dieses Bild zeigt den Blockcode vom letzten Commit im Master an.
-Die Aktualisierung dieses Bildes kann einige Minuten dauern.
-
-![Eine gerenderte Ansicht der Blöcke](https://github.com/mkleinsb/pxt-oledpaint/raw/master/.github/makecode/blocks.png)
+![... in Aktion](https://github.com/MKleinSB/pxt-OLEDpaint/blob/master/grafik.jpg)
 
 #### Metadaten (verwendet für Suche, Rendering)
 
 * for PXT/calliopemini
+* for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
